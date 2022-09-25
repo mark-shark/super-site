@@ -1,0 +1,32 @@
+.nav-list {
+  margin-top: 70px;
+
+  a {
+    margin: 0 4px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:first-child {
+      margin: 0 4px 0 8px;
+    }
+
+    &:last-child {
+      margin: 0 8px 0 4px;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+
+  .close-nav & {
+    display: none;
+  }
+
+  .open-nav & {
+    display: block;
+  }
+}
