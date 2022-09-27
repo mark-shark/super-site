@@ -12,19 +12,7 @@ body {
 
 .toolbar {
   p, span, div, a {
-    .light & {
-      color: $--bs-gray-dark;
-    }
-
-    .dark & {
-      color: $--bs-white;
-    }
-  }
-}
-
-.super-icon {
-  .light & {
-    border-color: $--bs-gray-dark !important;
+    color: $--bs-white;
   }
 }
 
@@ -32,8 +20,4 @@ body {
   padding: 0 24px 0 0;
   margin: 0 24px 0 0;
   border-right: 1px solid $--bs-white;
-
-  .light & {
-    border-color: $--bs-gray-dark !important;
-  }
 }

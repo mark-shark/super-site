@@ -5,7 +5,8 @@
   &-wrapper {
     margin-top: 80px;
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100%;
+    position: relative;
 
     .open-nav & {
       margin-left: 220px;
@@ -23,7 +24,8 @@
     border-right: 1px solid $--bs-secondary;
 
     .light & {
-      border-color: $--bs-dark;
+      border-color: $--bs-light;
+      background-color: $--bs-light-dark;
     }
 
     .open-nav & {

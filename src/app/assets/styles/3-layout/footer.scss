@@ -1,1 +1,46 @@
 @import "src/app/assets/styles/1-base/1-variables";
+
+footer {
+  margin: 40px 0 0 0;
+  padding: 30px;
+  width: 100%;
+  height: auto;
+  background-color: $--bs-blue;
+  position: absolute;
+  bottom: 0;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  a {
+    color: $--bs-white;
+
+    &:hover {
+      color: $--bs-white;
+      text-decoration: underline;
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    color: $--bs-white;
+    text-align: center;
+  }
+
+  svg {
+    width: 24px;
+    fill: $--bs-white;
+  }
+}
+
+.footer-block-heading {
+  color: $--bs-white;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
