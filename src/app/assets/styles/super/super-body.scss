@@ -1,0 +1,39 @@
+@import "src/app/assets/styles/1-base/1-variables";
+
+body {
+  &.dark {
+    background-color: $--bs-gray-dark;
+  }
+
+  &.light {
+    background-color: $--bs-white;
+  }
+}
+
+.toolbar {
+  p, span, div, a {
+    .light & {
+      color: $--bs-gray-dark;
+    }
+
+    .dark & {
+      color: $--bs-white;
+    }
+  }
+}
+
+.super-icon {
+  .light & {
+    border-color: $--bs-gray-dark !important;
+  }
+}
+
+.logo {
+  padding: 0 24px 0 0;
+  margin: 0 24px 0 0;
+  border-right: 1px solid $--bs-white;
+
+  .light & {
+    border-color: $--bs-gray-dark !important;
+  }
+}

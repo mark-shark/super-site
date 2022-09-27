@@ -1,18 +1,22 @@
+@import "src/app/assets/styles/1-base/1-variables";
+
 .spacer {
   flex: 1;
 }
 
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
-  //color: white;
+  background-color: $--bs-blue;
   font-weight: 600;
+  z-index: 3;
+
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
 
   img {
     margin: 0 16px;
@@ -36,11 +40,13 @@
     }
   }
 
-  .night-mode,
-  .settings {
-    margin: 0 10px 0 0;
-    padding: 4px 0 0 0;
+  .super-icon {
+    margin: 0 12px 0 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
     .mat-ico {
       height: 40px;
@@ -55,20 +61,66 @@
     }
   }
 
+  & > .night-mode {
+    padding: 0 10px 0 0;
+    border-right: 1px solid $--bs-white;
+  }
+
   & > .settings {
     padding: 0 0 0 10px;
-    border-left: 1px solid #fff;
+    border-left: 1px solid $--bs-white;
   }
 
   .logo {
     position: relative;
     display: flex;
     align-items: center;
-    color: #ffffff;
+    color: $--bs-white;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .title {
+    font-size: larger;
     font-weight: bold;
   }
 }
 
+.color-picker {
 
+}
+
+.color-picker {
+
+}
+.toggle-picker-panel {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  background-color: $--bs-white;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+
+  .toggle-picker & {
+    display: block;
+  }
+}
+
+.toggle-account-panel {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 3px;
+  background-color: $--bs-white;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+
+  .toggle-account & {
+    display: block;
+  }
+}

@@ -1,23 +1,27 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
-import {MediaMatcher} from "@angular/cdk/layout";
+import {Component, Renderer2} from '@angular/core';
+import {NavigationStart, Router} from "@angular/router";
 
 @Component({
-  selector: 'app-root',
+  selector: 'super-site-app',
   templateUrl: '../../tpl/app.html',
   styleUrls: ['../../assets/styles/layout.scss']
 })
 export class AppComponent {
-  mobileQuery: MediaQueryList;
+  previousUrl?: string;
 
-  private readonly _mobileQueryListener: () => void;
-
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+  constructor(private renderer: Renderer2, private router: Router) {
+    this.router.events
+      .subscribe((event) => {
+        if (event instanceof NavigationStart) {
+          if (this.previousUrl) {
+            this.renderer.removeClass(document.body, this.previousUrl);
+          }
+          let currentUrlSlug = event.url.slice(1)
+          if (currentUrlSlug) {
+            this.renderer.addClass(document.body, currentUrlSlug);
+          }
+          this.previousUrl = currentUrlSlug;
+        }
+      });
   }
 }

@@ -42,20 +42,6 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-
-  &.dark {
-    background-color: #303030;
-
-    h1, p, span, div, a {
-      color: #ffffff;
-    }
-  }
-
-  &.light {
-    background-color: #ffffff;
-
-    h1, p, span, div, a {
-      color: #000000;
-    }
-  }
 }
+
+@import "src/app/assets/styles/core";

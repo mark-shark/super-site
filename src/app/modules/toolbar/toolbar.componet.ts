@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Event} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -53,20 +54,38 @@ export class ToolbarComponent {
       : this.currentClassIdx + 1;
   }
 
-  status: boolean = true;
+  open_nav: boolean = true;
   openNavigation() {
     const bodyElement = document.body;
 
     if (bodyElement) {
-      this.status = !this.status;
-      const nextClass = !this.status ? 'open-nav' : 'close-nav';
-      const activeClass = this.status ? 'open-nav' : 'close-nav';
+      this.open_nav = !this.open_nav;
+      const nextClass = !this.open_nav ? 'open-nav' : 'close-nav';
+      const activeClass = this.open_nav ? 'open-nav' : 'close-nav';
 
       bodyElement.classList.remove(nextClass);
       bodyElement.classList.add(activeClass);
 
       this.bodyClass = activeClass;
     }
+  }
+
+  isPicked = false;
+  togglePicker() {
+    // reverse the value of property
+    this.isPicked = !this.isPicked;
+  }
+  togglePickerClickedOutside() {
+    this.isPicked = false;
+  }
+
+  isAccount = false;
+  toggleAccount() {
+    // reverse the value of property
+    this.isAccount = !this.isAccount;
+  }
+  toggleAccountClickedOutside() {
+    this.isAccount = false;
   }
 
 }

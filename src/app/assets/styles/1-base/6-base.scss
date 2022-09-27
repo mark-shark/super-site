@@ -19,17 +19,3 @@ h6 {
 p {
   margin: 0;
 }
-
-.mode_dark {
-
-  .dark & {
-    display: none;
-  }
-}
-
-.mode_light {
-
-  .light & {
-    display: none;
-  }
-}

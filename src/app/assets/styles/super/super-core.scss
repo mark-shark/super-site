@@ -1,0 +1,73 @@
+@import "src/app/assets/styles/1-base/1-variables";
+
+.super {
+
+  &-wrapper {
+    margin-top: 80px;
+    width: 100%;
+    height: calc(100% - 80px);
+
+    .open-nav & {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+    }
+  }
+
+  &-container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  &-aside {
+    display: none;
+    border-right: 1px solid $--bs-secondary;
+
+    .light & {
+      border-color: $--bs-dark;
+    }
+
+    .open-nav & {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 220px;
+      height: 100%;
+      padding-top: 70px;
+      z-index: 2;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    li {
+      list-style: none;
+      color: $--bs-light-dark;
+
+      .light & {
+        color: $--bs-dark;
+      }
+    }
+  }
+}
+
+.container-fluid {
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $--bs-light-dark;
+
+    .light & {
+      color: $--bs-dark;
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 20px 10px 0;
+    float: left;
+  }
+}
+
+
