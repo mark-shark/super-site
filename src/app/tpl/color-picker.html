@@ -1,0 +1,22 @@
+
+<div
+  [class.toggle-picker]="isPicked == true"
+  (click)="togglePicker()"
+  (clickOutside)="togglePickerClickedOutside()"
+  class="super-icon color-picker"
+  aria-label=""
+  title="{{'format_color_fill' | translate }}">
+  <mat-icon
+    fontIcon="format_color_fill"
+    aria-hidden="false"
+    aria-label="">
+    {{'format_color_fill' | translate }}
+  </mat-icon>
+
+  <div class="toggle-picker-panel">
+    <div class="color-{{color.name}}"
+         *ngFor="let color of colors"
+         (click)="onSelect(color)"
+          [title]="color.name"></div>
+  </div>
+</div>

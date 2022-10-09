@@ -1,0 +1,16 @@
+{
+  "night-mode": "Switch to light mode",
+  "day-mode": "Switch to night mode",
+  "login": "Login",
+  "settings": "Settings",
+  "basket": "Basket",
+  "language": "Language",
+  "account": "Account",
+  "supervisor_user": "Supervisor account",
+  "format_color_fill": "Color picker schema",
+  "emailAddress": "Email address",
+  "emailHelp": "We'll never share your email with anyone else.",
+  "Password": "Password",
+  "exampleCheck1": "Check me out",
+  "Submit": "Submit"
+}

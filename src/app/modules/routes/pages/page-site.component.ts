@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: '../../../tpl/routes/site.html',
   styleUrls: ['../../../assets/styles/4-routes/site.scss']
 })
-export class SiteComponent {
+export class PageSiteComponent {
 
 }

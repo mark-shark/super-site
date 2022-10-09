@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: '../../../tpl/routes/index.html',
   styleUrls: ['../../../assets/styles/4-routes/index.scss']
 })
-export class IndexComponent {
+export class PageIndexComponent {
 
 }

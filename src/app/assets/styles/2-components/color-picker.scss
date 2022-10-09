@@ -1,0 +1,85 @@
+@import "src/app/assets/styles/1-base/1-variables";
+@import "src/app/assets/styles/super/super-core";
+@import "src/app/assets/styles/super/super-body";
+
+.super-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .mat-ico {
+    height: 40px;
+    margin: 0 16px;
+  }
+}
+
+.toggle-picker-panel {
+  display: none;
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 120px;
+  height: 100px;
+  border-radius: 3px;
+  background-color: $--bs-white;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  column-gap: 6px;
+
+  .toggle-picker & {
+    display: flex;
+    cursor: auto;
+
+    & > div {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: solid 1px $--bs-gray;
+      cursor: pointer;
+    }
+
+    .color {
+      &-blue {
+        background-color: $--bs-blue;
+      }
+      &-indigo {
+        background-color: $--bs-indigo;
+      }
+      &-purple {
+        background-color: $--bs-purple;
+      }
+      &-pink {
+        background-color: $--bs-pink;
+      }
+      &-red {
+        background-color: $--bs-red;
+      }
+      &-orange {
+        background-color: $--bs-orange;
+      }
+      &-yellow {
+        background-color: $--bs-yellow;
+      }
+      &-green {
+        background-color: $--bs-green;
+      }
+      &-white {
+        background-color: $--bs-white;
+      }
+      &-gray {
+        background-color: $--bs-gray;
+      }
+      &-gray-dark {
+        background-color: $--bs-gray-dark;
+      }
+      &-dark {
+        background-color: $--bs-dark;
+      }
+    }
+  }
+}

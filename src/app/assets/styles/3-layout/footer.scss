@@ -8,6 +8,7 @@ footer {
   background-color: $--bs-blue;
   position: absolute;
   bottom: 0;
+  box-shadow: 0 0 9px 5px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
 
   ul {
     padding: 0;
@@ -43,4 +44,9 @@ footer {
   color: $--bs-white;
   text-transform: uppercase;
   margin: 0 0 20px 0;
+}
+
+a {
+  color: $--bs-white;
+  text-decoration: none;
 }

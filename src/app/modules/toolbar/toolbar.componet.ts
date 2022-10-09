@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Event} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -14,45 +13,7 @@ export class ToolbarComponent {
     this.openNavigation();
   }
 
-  availableClasses: string[] = ["light", "dark"];
-  currentClassIdx: number = 0;
-
-  bodyClass: string;
-
-  constructor() {
-    this.bodyClass = this.availableClasses[this.currentClassIdx];
-    this.changeBodyClass();
-  }
-
-  changeBodyClass() {
-    // get html body element
-    const bodyElement = document.body;
-
-    if (bodyElement) {
-      this.currentClassIdx = this.getNextClassIdx();
-      const nextClass = this.availableClasses[this.currentClassIdx];
-      const activeClass = this.availableClasses[this.getPrevClassIdx()];
-
-      // remove existing class (needed if theme is being changed)
-      bodyElement.classList.remove(activeClass);
-      // add next theme class
-      bodyElement.classList.add(nextClass);
-
-      this.bodyClass = nextClass;
-    }
-  }
-
-  getPrevClassIdx(): number {
-    return this.currentClassIdx === 0
-      ? this.availableClasses.length - 1
-      : this.currentClassIdx - 1;
-  }
-
-  getNextClassIdx(): number {
-    return this.currentClassIdx === this.availableClasses.length - 1
-      ? 0
-      : this.currentClassIdx + 1;
-  }
+  bodyClass?: string;
 
   open_nav: boolean = true;
   openNavigation() {
@@ -69,23 +30,4 @@ export class ToolbarComponent {
       this.bodyClass = activeClass;
     }
   }
-
-  isPicked = false;
-  togglePicker() {
-    // reverse the value of property
-    this.isPicked = !this.isPicked;
-  }
-  togglePickerClickedOutside() {
-    this.isPicked = false;
-  }
-
-  isAccount = false;
-  toggleAccount() {
-    // reverse the value of property
-    this.isAccount = !this.isAccount;
-  }
-  toggleAccountClickedOutside() {
-    this.isAccount = false;
-  }
-
 }

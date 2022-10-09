@@ -3,11 +3,11 @@
 
   <button mat-icon-button (click)="openNavigation()"><mat-icon>menu</mat-icon></button>
 
-  <a routerLink="/" class="logo" [title]="title">
+  <a routerLink="/index" class="logo" [title]="title">
     <img
       width="40"
       [alt]="title"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+      src="assets/svg/angular-white-transparent.svg"
     />
     <span class="title">{{ title }}</span>
   </a>
@@ -16,37 +16,8 @@
 
   <div class="spacer"></div>
 
-  <a (click)="changeBodyClass()" class="super-icon night-mode" aria-label="Switch to light mode" title="Switch to light mode">
-    <mat-icon fontIcon="light_mode" *ngIf="currentClassIdx == 1" aria-hidden="false" aria-label="Switch to light mode">light_mode</mat-icon>
-    <mat-icon fontIcon="dark_mode" *ngIf="currentClassIdx == 0" aria-hidden="false" aria-label="Switch to dark mode">dark_mode</mat-icon>
-  </a>
+  <app-night-mode class="night-mode"></app-night-mode>
 
-  <a [class.toggle-picker]="isPicked == true"
-     (click)="togglePicker()" (clickOutside)="togglePickerClickedOutside()" class="super-icon color-picker" aria-label="ColorPicker" title="ColorPicker">
-    <mat-icon fontIcon="format_color_fill" aria-hidden="false" aria-label="ColorPicker">format_color_fill</mat-icon>
-    <div class="toggle-picker-panel">
-    </div>
-  </a>
-  <a [class.toggle-account]="isAccount == true"
-     (click)="toggleAccount()" (clickOutside)="toggleAccountClickedOutside()" class="super-icon account" aria-label="Account" title="Account">
-    <mat-icon fontIcon="account_circle" aria-hidden="false" aria-label="Account">account_circle</mat-icon>
-    <div class="toggle-account-panel">
-    </div>
-  </a>
-  <a class="super-icon supervised_user" aria-label="Supervised user" title="Supervised user">
-    <mat-icon fontIcon="supervised_user_circle" aria-hidden="false" aria-label="Supervised user">supervised_user_circle</mat-icon>
-  </a>
-  <a class="super-icon language" aria-label="Language" title="Language">
-    <mat-icon fontIcon="language" aria-hidden="false" aria-label="Language">language</mat-icon>
-  </a>
-  <a class="super-icon basket" aria-label="Basket" title="Basket">
-    <mat-icon fontIcon="shopping_basket" aria-hidden="false" aria-label="Basket">shopping_basket</mat-icon>
-  </a>
-  <a class="super-icon login" aria-label="Login" title="Login">
-    <mat-icon fontIcon="login" aria-hidden="false" aria-label="Login">login</mat-icon>
-  </a>
-  <a class="super-icon settings" aria-label="Setting" title="Setting">
-    <mat-icon fontIcon="settings" aria-hidden="false" aria-label="Settings">settings</mat-icon>
-  </a>
+  <app-toolbar-settings></app-toolbar-settings>
 
 </div>

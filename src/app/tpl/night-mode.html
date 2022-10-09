@@ -1,0 +1,4 @@
+<a (click)="changeBodyClass()" class="super-icon night-mode">
+  <mat-icon fontIcon="light_mode" *ngIf="currentClassIdx == 1" aria-hidden="false" aria-label="Switch to light mode" title="{{'night-mode' | translate }}">light_mode</mat-icon>
+  <mat-icon fontIcon="dark_mode" *ngIf="currentClassIdx == 0" aria-hidden="false" aria-label="Switch to dark mode" title="{{'day-mode' | translate }}">dark_mode</mat-icon>
+</a>

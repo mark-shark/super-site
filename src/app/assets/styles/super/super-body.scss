@@ -8,11 +8,22 @@ body {
   &.light {
     background-color: $--bs-white;
   }
+
+  &.index {
+
+    //.mat-focus-indicator {
+    //  display: none;
+    //}
+  }
 }
 
 .toolbar {
   p, span, div, a {
     color: $--bs-white;
+  }
+
+  .lang-cz, .lang-en {
+    color: $--bs-dark;
   }
 }
 

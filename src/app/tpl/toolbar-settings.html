@@ -1,0 +1,98 @@
+<div class="toolbar-setting">
+
+  <app-color-picker class="color-picker"></app-color-picker>
+  <div
+    [class.toggle-account]="isAccount == true"
+    (click)="toggleAccount()"
+    (clickOutside)="toggleAccountClickedOutside()"
+    class="super-icon account"
+    aria-label="Account"
+    title="{{'account' | translate }}">
+    <mat-icon
+      fontIcon="account_circle"
+      aria-hidden="false"
+      aria-label="">
+      {{'account' | translate }}
+    </mat-icon>
+    <div class="toggle-account-panel">
+    </div>
+  </div>
+  <div
+    [class.toggle-super-account]="isSuperAccount == true"
+    (click)="toggleSuperAccount()"
+    (clickOutside)="toggleSuperAccountClickedOutside()"
+    class="super-icon supervised_user"
+    aria-label=""
+    title="{{'supervisor_user' | translate }}">
+    <mat-icon
+      fontIcon="supervised_user_circle"
+      aria-hidden="false"
+      aria-label="">
+      {{'supervisor_user' | translate }}
+    </mat-icon>
+    <div class="toggle-super-account-panel">
+    </div>
+  </div>
+  <div
+    [class.toggle-lang]="isLanged == true"
+    (click)="toggleLanguage()"
+    (clickOutside)="toggleLanguageClickedOutside()"
+    class="super-icon language"
+    aria-label="Language"
+    title="{{'language' | translate }}">
+    <mat-icon
+      fontIcon="language"
+      aria-hidden="false"
+      aria-label="">
+      {{'language' | translate }}
+    </mat-icon>
+    <div class="toggle-lang-panel">
+      <img src="assets/img/cz.png" class="lang-cz" title="CZ" (click)="useLanguage('cz')">
+      <img src="assets/img/gb.png" class="lang-en" title="EN" (click)="useLanguage('en')">
+    </div>
+  </div>
+  <div
+    [class.toggle-mini-basket]="isMiniBasketed == true"
+    (click)="toggleMiniBasket()"
+    (clickOutside)="toggleMiniBasketClickedOutside()"
+    class="super-icon basket"
+    aria-label=""
+    title="{{'basket' | translate }}">
+    <mat-icon
+      fontIcon="shopping_basket"
+      aria-hidden="false"
+      aria-label="">
+      {{'basket' | translate }}
+    </mat-icon>
+    <div class="toggle-mini-basket-panel">
+    </div>
+  </div>
+  <a
+    routerLink="/login"
+    class="super-icon login"
+    aria-label=""
+    title="{{'login' | translate }}">
+    <mat-icon
+      fontIcon="login"
+      aria-hidden="false"
+      aria-label="">
+      {{'login' | translate }}
+    </mat-icon>
+  </a>
+  <div
+    [class.toggle-setting]="isSetted == true"
+    (click)="toggleSetting()"
+    (clickOutside)="toggleSettingClickedOutside()"
+    class="super-icon settings"
+    aria-label="Settings"
+    title="{{'settings' | translate }}">
+    <mat-icon
+      fontIcon="settings"
+      aria-hidden="false"
+      aria-label="Settings">
+      {{'settings' | translate }}
+    </mat-icon>
+    <div class="toggle-setting-panel">
+    </div>
+  </div>
+</div>

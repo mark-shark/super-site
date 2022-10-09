@@ -1,4 +1,4 @@
-import {Component, Renderer2} from '@angular/core';
+import {Component, HostListener, Renderer2} from '@angular/core';
 import {NavigationStart, Router} from "@angular/router";
 
 @Component({
@@ -24,4 +24,13 @@ export class AppComponent {
         }
       });
   }
+
+  @HostListener('scroll', ['$event'])
+  onScroll(event: any) {
+    if (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight - 1) {
+      // code
+    }
+  }
+
 }
+
