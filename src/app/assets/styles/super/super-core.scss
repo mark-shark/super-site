@@ -5,13 +5,13 @@
   &-wrapper {
     padding-top: 80px;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     position: relative;
-    overflow-y: scroll;
+    //overflow-y: scroll;
 
     .open-nav & {
-      margin-left: 220px;
-      width: calc(100% - 220px);
+      margin-left: 260px;
+      width: calc(100% - 260px);
     }
   }
 
@@ -20,9 +20,15 @@
     padding: 0 15px;
   }
 
+  &-article {
+    padding-bottom: 180px;
+  }
+
   &-aside {
     display: none;
+    left: -260px;
     border-right: 1px solid $--bs-secondary;
+    transition: left 0.3s;
 
     .light & {
       border-color: $--bs-light;
@@ -33,7 +39,8 @@
       display: block;
       position: fixed;
       top: 0;
-      width: 220px;
+      left: 0;
+      min-width: 260px;
       height: 100%;
       padding-top: 70px;
       z-index: 2;
