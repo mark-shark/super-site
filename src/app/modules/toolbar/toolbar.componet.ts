@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-toolbar',
+  selector: 'super-toolbar',
   templateUrl: '../../tpl/toolbar.html',
   styleUrls: ['../../assets/styles/3-layout/toolbar.scss']
 })

@@ -1,17 +1,25 @@
-<button (click)="openWithTemplate(tpl)" >
-  Show
-</button>
+<mat-icon
+  (click)="show =  !show"
+  class=""
+  fontIcon="add_task"
+  aria-hidden="false"
+  aria-label="">
+</mat-icon>
 
-<ng-template #tpl>
-  <div class="modal-card">
+<div class="modal-wrap" *ngIf="show">
+  <div class="modal-overlay" (click)="show = !show"></div>
+
+  <div class="modal-inner">
+    <div class="modal-close" (click)="show = !show"></div>
+
     <header class="modal-card-head">
-      …
+      header
     </header>
     <section class="modal-card-body">
-      …
+      content
     </section>
     <footer class="modal-card-foot">
-      …
+      footer
     </footer>
   </div>
-</ng-template>
+</div>

@@ -3,7 +3,7 @@ import {Color} from "../../models/picker-colors";
 import {COLORS} from "../../../assets/database/setting/colors";
 
 @Component({
-  selector: 'app-color-picker',
+  selector: 'super-color-picker',
   templateUrl: '../../tpl/color-picker.html',
   styleUrls: ['../../assets/styles/2-components/color-picker.scss']
 })

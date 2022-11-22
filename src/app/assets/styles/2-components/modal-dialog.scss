@@ -1,7 +1,75 @@
-.modal {
-  pointer-events: none !important;
-}
+@import "src/app/assets/styles/1-base/1-variables";
 
-.modal-content {
-  pointer-events: all !important;
+.modal {
+  &-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 101vh;
+    cursor: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 1s;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 101vh;
+    background-color: #333333a1;
+    z-index: 3;
+    backdrop-filter: blur(3px);
+    transition: height 1s;
+  }
+
+  &-inner {
+    padding: 30px 20px;
+    max-width: 600px;
+    min-width: 200px;
+    min-height: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    z-index: 4;
+    position: relative;
+    color: #333333;
+  }
+
+  &-close {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
 }

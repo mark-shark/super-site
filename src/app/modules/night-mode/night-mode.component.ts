@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-night-mode',
+  selector: 'super-night-mode',
   templateUrl: '../../tpl/night-mode.html',
   styleUrls: ['../../assets/styles/2-components/night-mode.scss']
 })
